@@ -1,6 +1,5 @@
 import type { Config } from 'tailwindcss';
 import plugin from 'tailwindcss/plugin';
-import { breakpoints, colors, typos } from '@/lib/utils/tailwindUtil';
 
 const config: Config = {
   darkMode: 'class',
@@ -11,18 +10,57 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      colors: colors,
+      colors: {
+        white: {
+          500: '#f1f5f9',
+          900: '#fff',
+          DEFAULT: '#fff',
+          transparent: {
+            50: '#ffffff80',
+          },
+        },
+        black: {
+          400: '#404040',
+          500: '#1e1e1e',
+          900: '#000000',
+          DEFAULT: '#000000',
+          transparent: {
+            30: '#00000048',
+            40: '#00000064',
+          },
+        },
+        green: {
+          300: '#c8edac',
+          500: '#219025',
+          DEFAULT: '#219025',
+        },
+        blue: {
+          300: '#7491be',
+          500: '#0069ff',
+          DEFAULT: '#0069ff',
+        },
+        red: {
+          300: '#e77b7c',
+          500: '#c42e30',
+          DEFAULT: '#c42e30',
+        },
+        mint: {
+          300: '#6ba9bo',
+          500: '#15c7db',
+          DEFAULT: '#15c7db',
+        },
+      },
       fontFamily: {
         sans: ['var(--font-ibm-plex-sans)'],
         tenada: ['var(--font-tenada)'],
       },
       screens: {
-        xs: `${breakpoints.xs}px`,
-        sm: `${breakpoints.sm}px`,
-        md: `${breakpoints.md}px`,
-        lg: `${breakpoints.lg}px`,
-        xl: `${breakpoints.xl}px`,
-        '2xl': `${breakpoints['2xl']}px`,
+        xs: `280px`,
+        sm: `640px`,
+        md: `768px`,
+        lg: `1200px`,
+        xl: `1470px`,
+        '2xl': `1740px`,
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
@@ -42,6 +80,24 @@ const config: Config = {
       },
     },
   },
-  plugins: [plugin(({ addUtilities }) => addUtilities(typos))],
+  plugins: [
+    plugin(({ addUtilities }) =>
+      addUtilities({
+        '.typo-2xl': {
+          fontFamily: 'var(--font-tenada)',
+          fontSize: '24px',
+          letterSpacing: '0.24px',
+          fontStyle: 'normal',
+        },
+        '.typo-4xl': {
+          fontFamily: 'var(--font-ibm-plex-sans)',
+          fontSize: '64px',
+          letterSpacing: '-1.28px',
+          fontWeight: '700',
+          fontStyle: 'normal',
+        },
+      }),
+    ),
+  ],
 };
 export default config;
