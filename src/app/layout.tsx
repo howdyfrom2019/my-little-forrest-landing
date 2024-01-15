@@ -46,7 +46,7 @@ export default function RootLayout({
           'font-sans font-normal',
         ])}
       >
-        {children}
+        <main>{children}</main>
       </body>
     </html>
   );
