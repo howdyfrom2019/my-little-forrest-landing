@@ -1,6 +1,7 @@
 export const BASE_URL = process.env.NEXT_PUBLIC_S3_HOST;
 
 export const CDN_ASSETS = {
+  logo: `${BASE_URL}/landing/svg/logo.svg`,
   background: {
     gardenDayTime: `${BASE_URL}/landing/background/bg-garden-daytime.png`,
     gardenNightWinter: `${BASE_URL}/landing/background/bg-garden-night-winter.png`,
