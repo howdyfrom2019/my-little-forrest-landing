@@ -1,3 +1,4 @@
+import CharacterSection from '@/app/(landing)/components/CharacterSection';
 import TopHeroSection from '@/app/(landing)/components/TopHeroSection';
 import TopNav from '@/components/TopNav';
 
@@ -6,6 +7,7 @@ export default function Home() {
     <article className={'relative flex min-h-screen w-full flex-col'}>
       <TopNav />
       <TopHeroSection />
+      <CharacterSection />
     </article>
   );
 }
