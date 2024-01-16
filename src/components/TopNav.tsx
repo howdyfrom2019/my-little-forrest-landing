@@ -7,7 +7,7 @@ const TopNav = () => {
     <div
       aria-label={'top-navigation-wrapper'}
       className={
-        'fixed left-0 top-0 mx-auto flex w-full items-center bg-[#ffffff10] py-6 backdrop-blur-md'
+        'fixed left-0 top-0 z-[999] mx-auto flex w-full items-center bg-[#ffffff10] py-6 backdrop-blur-md'
       }
     >
       <div

@@ -10,7 +10,7 @@ interface ButtonProps extends Omit<ComponentProps<'button'>, 'color'> {
 }
 
 const COLOR_SCHEME: Record<ColorType, string> = {
-  green: 'bg-green text-white-500 hover:bg-green-400',
+  green: 'bg-green text-white-500 hover:bg-green-600',
 };
 
 const SIZE_SCHEME: Record<SizeType, string> = {
