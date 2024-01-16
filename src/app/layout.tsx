@@ -43,7 +43,7 @@ export default function RootLayout({
         className={cn([
           ibmPlexSans.variable,
           tenada.variable,
-          'font-sans font-normal',
+          'overflow-x-hidden font-sans font-normal',
         ])}
       >
         <main>{children}</main>
