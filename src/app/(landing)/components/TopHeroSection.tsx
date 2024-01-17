@@ -74,7 +74,7 @@ const TopHeroSection = () => {
       <section className={'flex flex-col gap-8 pb-20 pt-32 text-center'}>
         <h2 className={'font-tenada uppercase typo-2xl'}>Overview</h2>
         <p className={'text-sm'}>
-          "나의 작은 정원"은 한적한 시골마을 길리에서 자란 주인공이 도시 생활에
+          {'\"나의 작은 정원\"'}은 한적한 시골마을 길리에서 자란 주인공이 도시 생활에
           지쳐 작은 식물 정원을 운영하며 시작되는 이야기입니다.
           <br />
           정원에는 어느 날, 세 명의 특별한 소녀들이 찾아와 각자의 매력과
