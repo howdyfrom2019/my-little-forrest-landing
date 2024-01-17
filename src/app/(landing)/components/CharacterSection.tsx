@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import CharacterSelectButton from '@/app/(landing)/components/CharacterSelectButton';
 import TrapeZoid from '@/components/TrapeZoid';
 import { CDN_ASSETS } from '@/lib/constants/cdnConstant';
 
@@ -39,6 +40,11 @@ const CharacterSection = () => {
           <br />
           리하와 함께하는 정원에선 어떤 일이 일어날까요?
         </p>
+        <div className={'flex items-center'}>
+          <CharacterSelectButton active />
+          <CharacterSelectButton color={'red'} character={'narin'} />
+          <CharacterSelectButton color={'mint'} character={'soyeon'} />
+        </div>
       </div>
       <div className={'relative h-full w-1/2'}>
         <TrapeZoid className={'absolute right-0 top-0 fill-blue-300'} />

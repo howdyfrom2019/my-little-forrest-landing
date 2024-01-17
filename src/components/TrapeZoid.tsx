@@ -1,12 +1,22 @@
-const TrapeZoid = ({ className }: { className?: string }) => {
+import { ComponentPropsWithoutRef } from 'react';
+
+const TrapeZoid = ({
+  className,
+  width,
+  height,
+  fill,
+  viewBox,
+  ...props
+}: ComponentPropsWithoutRef<'svg'>) => {
   return (
     <svg
-      width="754"
-      height="863"
-      viewBox="0 0 754 863"
-      fill="current"
+      width={width ?? '754'}
+      height={height ?? '863'}
+      viewBox={viewBox ?? '0 0 754 863'}
+      fill={fill ?? 'current'}
       xmlns="http://www.w3.org/2000/svg"
       className={className}
+      {...props}
     >
       <g filter="url(#filter0_f_95_6)">
         <path d="M129.5 4H749.69V858.5H4L129.5 4Z" fill="current" />
