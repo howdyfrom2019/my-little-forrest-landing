@@ -24,7 +24,7 @@ export const CDN_ASSETS = {
       },
       soyeon: {
         banner: `${BASE_URL}/landing/character/soyeon-front.png`,
-        profile: `${BASE_URL}/landing/character/soyeon-profil.png`,
+        profile: `${BASE_URL}/landing/character/soyeon-profile.png`,
       },
     },
   },

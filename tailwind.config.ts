@@ -45,7 +45,7 @@ const config: Config = {
           DEFAULT: '#c42e30',
         },
         mint: {
-          300: '#6ba9bo',
+          300: '#6ba9b0',
           500: '#15c7db',
           DEFAULT: '#15c7db',
         },

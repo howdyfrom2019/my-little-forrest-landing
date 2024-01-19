@@ -1,17 +1,13 @@
-import Image from 'next/image';
-import { CDN_ASSETS } from '@/lib/constants/cdnConstant';
+import CharacterSection from '@/app/(landing)/components/CharacterSection';
+import TopHeroSection from '@/app/(landing)/components/TopHeroSection';
+import TopNav from '@/components/TopNav';
 
 export default function Home() {
   return (
-    <main
-      className={'flex min-h-screen flex-col items-center justify-between p-24'}
-    >
-      <Image
-        src={CDN_ASSETS.character.heroes.riha}
-        alt={'riha-test'}
-        width={512}
-        height={768}
-      />
-    </main>
+    <article className={'relative flex min-h-screen w-full flex-col'}>
+      <TopNav />
+      <TopHeroSection />
+      <CharacterSection />
+    </article>
   );
 }
