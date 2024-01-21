@@ -2,6 +2,7 @@ import Image from 'next/image';
 import CharacterSelectButton from '@/app/(landing)/components/CharacterSelectButton';
 import TrapeZoid from '@/components/TrapeZoid';
 import { CDN_ASSETS } from '@/lib/constants/cdnConstant';
+import { cn } from '@/lib/utils/tailwindUtil';
 
 const CharacterSection = () => {
   return (
@@ -46,7 +47,7 @@ const CharacterSection = () => {
           <CharacterSelectButton color={'mint'} character={'soyeon'} />
         </div>
       </div>
-      <div className={'relative h-full w-1/2'}>
+      <div className={cn('md:relative md:h-full md:w-1/2')}>
         <TrapeZoid className={'absolute right-0 top-0 fill-blue-300'} />
         <Image
           className={

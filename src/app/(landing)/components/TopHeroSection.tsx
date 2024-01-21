@@ -1,11 +1,12 @@
 import Image from 'next/image';
 import { CDN_ASSETS } from '@/lib/constants/cdnConstant';
+import { cn } from '@/lib/utils/tailwindUtil';
 
 const TopHeroSection = () => {
   return (
     <>
       <section
-        className={'relative flex h-screen w-full flex-col gap-8 md:h-[853px]'}
+        className={'relative flex h-[70vh] w-full flex-col gap-8 md:h-screen'}
       >
         <div className={'absolute left-0 top-0 -z-1 h-full w-full'}>
           <Image
@@ -40,36 +41,45 @@ const TopHeroSection = () => {
             이루어졌습니다.
           </p>
         </div>
-        <Image
-          aria-label={'소연,soyeon'}
+        <div
           className={
-            'absolute left-1/2 top-[calc(100%_+_48px)] -translate-x-[calc(50%_+_224px)] -translate-y-[110%] md:-translate-y-full'
+            'relative left-1/2 top-full h-1/2 w-full -translate-x-1/2 -translate-y-1/4'
           }
-          src={CDN_ASSETS.character.transparent.soyeon.banner}
-          alt={'soyeon-banner'}
-          width={366}
-          height={366}
-        />
-        <Image
-          aria-label={'나린,narin'}
-          className={
-            'absolute left-1/2 top-[calc(100%_+_86px)] -translate-x-[calc(50%_-_224px)] -translate-y-[110%] -scale-x-100 md:-translate-y-full'
-          }
-          src={CDN_ASSETS.character.transparent.narin.banner}
-          alt={'narin-banner'}
-          width={419}
-          height={419}
-        />
-        <Image
-          aria-label={'리하,riha'}
-          className={
-            'absolute left-1/2 top-[calc(100%_+_86px)] -translate-x-1/2 -translate-y-[110%] md:-translate-y-full'
-          }
-          src={CDN_ASSETS.character.transparent.riha.banner}
-          alt={'riha-banner'}
-          width={504}
-          height={504}
-        />
+        >
+          <Image
+            aria-label={'소연,soyeon'}
+            className={cn([
+              'absolute left-1/2 top-0 md:h-[366px] md:w-[366px] md:-translate-x-[calc(50%_+_224px)]',
+              'h-[250px] w-[250px] -translate-x-[calc(50%_+_100px)] -translate-y-[150%]',
+            ])}
+            src={CDN_ASSETS.character.transparent.soyeon.banner}
+            alt={'soyeon-banner'}
+            width={366}
+            height={366}
+          />
+          <Image
+            aria-label={'나린,narin'}
+            className={cn([
+              'absolute left-1/2 top-[86px] -translate-y-[180%] -scale-x-100 md:h-[419px] md:w-[419px] md:-translate-x-[calc(50%_-_224px)] md:-translate-y-[160%]',
+              'h-[260px] w-[260px] -translate-x-[calc(50%_-_100px)]',
+            ])}
+            src={CDN_ASSETS.character.transparent.narin.banner}
+            alt={'narin-banner'}
+            width={419}
+            height={419}
+          />
+          <Image
+            aria-label={'리하,riha'}
+            className={cn([
+              'absolute left-1/2 top-[86px] -translate-x-1/2 -translate-y-[170%] md:h-[504px] md:w-[504px] md:-translate-y-[150%]',
+              'h-[300px] w-[300px]',
+            ])}
+            src={CDN_ASSETS.character.transparent.riha.banner}
+            alt={'riha-banner'}
+            width={504}
+            height={504}
+          />
+        </div>
       </section>
       <section className={'flex flex-col gap-8 pb-20 pt-32 text-center'}>
         <h2 className={'font-tenada uppercase typo-2xl'}>Overview</h2>

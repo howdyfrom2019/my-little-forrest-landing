@@ -27,7 +27,7 @@ const CharacterSelectButton = ({
   return (
     <button
       className={cn([
-        'relative aspect-[131/231] w-32 -skew-x-12',
+        'relative aspect-[131/231] w-20 -skew-x-12 md:w-32',
         color === 'blue' && 'bg-blue-300',
         color === 'red' && 'bg-red-300',
         color === 'mint' && 'bg-mint-300',
